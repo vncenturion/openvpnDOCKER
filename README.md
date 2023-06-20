@@ -1,10 +1,12 @@
 # openvpnDOCKER
 
-Configuração de vpn-server em docker
+Configuração de vpn-server em docker utilizando imagem docker: [kylemanna/openvpn](https://hub.docker.com/r/kylemanna/openvpn/).
 
 ## Pré-requisitos
 
-Certifique-se de ter o Docker instalado no seu sistema antes de executar esses comandos.
+Para a prática serão utilizadas 3 máquinas virtuais ubuntu 22.04.2 LTS (memoria 2Gb, 2 processadores) sobre host windows (processador 11th i7-11800H, 2.3GHz, 16Gb ram). Foi utilizado o hipervisor [VMware Workstation PRO](https://www.vmware.com/br/products/workstation-pro/workstation-pro-evaluation.html) 17.0.0 build-20800274, e todas as vm's foram conectadas por rede personalizada VMnet8(NAT).
+
+Certifique-se de ter o Docker (versão 24.0.2) instalado no seu sistema antes de executar esses comandos. Caso contrário, instale o docker engine de acordo com as instruções da [página do desenvolvedor](https://docs.docker.com/engine/install/ubuntu/).
 
 ## Instalação
 
