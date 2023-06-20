@@ -106,3 +106,12 @@ Se necessário, instale o net-tools:
 ```shell
 sudo apt update && sudo apt install -y net-tools
 ```
+
+## REFERÊNCIAS
+
+
+https://blog.ricardopereira.eu/2015/01/28/PT-vpn-configuration-with-docker/
+
+https://medium.com/@gurayy/set-up-a-vpn-server-with-docker-in-5-minutes-a66184882c45
+
+https://hub.docker.com/r/kylemanna/openvpn/
