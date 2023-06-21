@@ -38,6 +38,8 @@ Certifique-se de ter o Docker (versão 24.0.2) instalado no seu sistema antes de
       docker run -v ovpn-data:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki
    ```
 
+Será iniciado o processo de configuração e geração de chaves e certificados para um servidor OpenVPN usando o OpenSSL. Anote as senhas para não ter problemas nesta etapa. Será solicitado um "Common Name" para identificar o servidor ou entidade para o certificado. Insira o nome do servidor vpn que desejar.
+
 ### Gerar arquivos de configuração do cliente
 
 5. Gerar as chaves para o cliente "cliente01":
@@ -64,9 +66,17 @@ Certifique-se de ter o Docker (versão 24.0.2) instalado no seu sistema antes de
       docker run -v ovpn-data:/etc/openvpn --rm kylemanna/openvpn ovpn_getclient cliente02 > cliente02.ovpn
    ```
 
+### Inicialização do servidor
+
+9. Para inicializar o servidor OpenVPN, execute o comando:
+
+   ```shell
+      docker run -v ovpn-data:/etc/openvpn --rm -p 1194:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn
+   ```
+
 ## Transferência dos arquivos de configuração
 
-Execute os seguintes comandos para transferir os arquivos de configuração do cliente para os respectivos hosts:
+Abra um novo terminal e execute os seguintes comandos para transferir os arquivos de configuração do cliente para os respectivos hosts dos clientes:
 
 9. Utilizando SCP na vm hospedeira do container:
 
