@@ -2,6 +2,14 @@
 
 Configuração de vpn-server em docker utilizando imagem docker: [kylemanna/openvpn](https://hub.docker.com/r/kylemanna/openvpn/).
 
+A imagem kylemanna/openvpn inclui scripts para gerar automaticamente:
+
+* Parâmetros Diffie-Hellman
+* Uma chave privada
+* Um certificado autoassinado correspondente à chave privada para o servidor OpenVPN
+* Uma chave e certificado EasyRSA CA
+* Uma chave de autenticação TLS a partir da segurança HMAC
+
 ## Pré-requisitos
 
 Para a prática serão utilizadas 3 máquinas virtuais ubuntu 22.04.2 LTS (memoria 2Gb, 2 processadores) sobre host windows (processador 11th i7-11800H, 2.3GHz, 16Gb ram). Foi utilizado o hipervisor [VMware Workstation PRO](https://www.vmware.com/br/products/workstation-pro/workstation-pro-evaluation.html) 17.0.0 build-20800274, e todas as vm's foram conectadas por rede personalizada VMnet8(NAT).
